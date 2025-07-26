@@ -47,7 +47,7 @@ function analyzeSalesData(data, options) {
 
     // Проверка на пустой массив purchase_records
     if (data.purchase_records.length === 0) {
-        return []; // Возвращаем пустой массив или можно выдать сообщение об ошибке
+        throw new Error('Массив purchase_records пуст');
     }
 
     // Подготовка промежуточных данных
